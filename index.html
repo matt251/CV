@@ -1,3 +1,23 @@
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script>
+    async function getcounter (e) {
+        console.log("scrupt executed");
+        const response = await axios({
+            method: 'GET',
+            url: "https://cvcounter.azurewebsites.net/api/counter?page=index.html"
+        })
+        console.log(response);
+        //document.write(response.data);
+        document.getElementById("counter").innerHTML = "page count="+ response.data;
+    }
+    </script>
+
 <html>
-<h1> Hello World!!!! </p>
-</html>
+    <body onload="getcounter()">
+<h1> Hello World!!!! </h1>
+<h2 id="counter" value="0"></h2>
+
+</body>
+    
+
+    </html>

@@ -1,10 +1,12 @@
 <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 <script>
     async function getcounter (e) {
-        console.log("scrupt executed");
+        var fileName = location.href.split("/").slice(-1); 
+        var url = "https://cvcounter.azurewebsites.net/api/counter?page=";
+
         const response = await axios({
             method: 'GET',
-            url: "https://cvcounter.azurewebsites.net/api/counter?page=index.html"
+            url: url+fileName
         })
         console.log(response);
         //document.write(response.data);
@@ -14,7 +16,7 @@
 
 <html>
     <body onload="getcounter()">
-<h1> Hello World!!!! </h1>
+<h1> CV page</h1>
 <h2 id="counter" value="0"></h2>
 
 </body>

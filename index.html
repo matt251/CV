@@ -24,8 +24,6 @@
 
 <body onload="getcounter()">
 	<!-- DEMO ONLY --> 
-	<div class="demo-banner px-2 py-3 text-white text-center font-weight-bold bg-primary">Want a professional Bootstrap 4 vcard & portfolio template for building your personal brand?<br class="d-lg-none"><a class="btn demo-btn-on-bg text-white font-weight-bold ml-2 mt-2 mt-lg-0" href="https://themes.3rdwavemedia.com/bootstrap-templates/resume/devcard-bootstrap-4-vcard-portfolio-template-for-software-developers/" target="_blank"><i class="fas fa-external-link-alt mr-2"></i>Check out DevCard</a>
-	</div>
 	<div class="main-wrapper">
 		<div class="container px-3 px-lg-5">
 			<article class="resume-wrapper mx-auto theme-bg-light p-5 mb-5 my-5 shadow-lg">
@@ -33,15 +31,15 @@
 				<div class="resume-header">
 					<div class="row align-items-center">
 						<div class="resume-title col-12 col-md-6 col-lg-8 col-xl-9">
-							<h2 class="resume-name mb-0 text-uppercase">Simon Doe</h2>
-							<div class="resume-tagline mb-3 mb-md-0">Senior Software Engineer</div>
+							<h2 class="resume-name mb-0 text-uppercase">Matthew Thomasson</h2>
+							<div class="resume-tagline mb-3 mb-md-0">IT & Change Consultant</div>
 						</div><!--//resume-title-->
 						<div class="resume-contact col-12 col-md-6 col-lg-4 col-xl-3">
 							<ul class="list-unstyled mb-0">
-								<li class="mb-2"><i class="fas fa-phone-square fa-fw fa-lg mr-2 "></i><a class="resume-link" href="tel:#">0123 4567 890</a></li>
-								<li class="mb-2"><i class="fas fa-envelope-square fa-fw fa-lg mr-2"></i><a class="resume-link" href="mailto:#">simon.doe@yourwebsite.com</a></li>
-								<li class="mb-2"><i class="fas fa-globe fa-fw fa-lg mr-2"></i><a class="resume-link" href="#">www.yourwebsite.com</a></li>
-								<li class="mb-0"><i class="fas fa-map-marker-alt fa-fw fa-lg mr-2"></i>New York</li>
+								<li class="mb-2"><i class="fas fa-phone-square fa-fw fa-lg mr-2 "></i><a class="resume-link" href="https://www.linkedin.com/in/matthomasson/">see Linkedin</a></li>
+								<li class="mb-2"><i class="fas fa-envelope-square fa-fw fa-lg mr-2"></i><a class="resume-link" href="mailto:#">matt at matthewt com</a></li>
+								<li class="mb-2"><i class="fas fa-globe fa-fw fa-lg mr-2"></i><a class="resume-link" href="http://www.yourdigitalchange.com">www.yourdigitalchange.com</a></li>
+								<li class="mb-0"><i class="fas fa-map-marker-alt fa-fw fa-lg mr-2"></i>Jersey, United Kingdom</li>
 							</ul>
 						</div><!--//resume-contact-->
 					</div><!--//row-->
@@ -252,6 +250,8 @@
 								<li class="list-inline-item mb-lg-0 mr-3"><a class="resume-link" href="#"><i class="fab fa-github-square fa-2x mr-2" data-fa-transform="down-4"></i><span class="d-none d-lg-inline-block text-muted">github.com/username</span></a></li>
 								<li class="list-inline-item mb-lg-0 mr-3"><a class="resume-link" href="#"><i class="fab fa-linkedin fa-2x mr-2" data-fa-transform="down-4"></i><span class="d-none d-lg-inline-block text-muted">linkedin.com/in/username</span></a></li>
 								<li class="list-inline-item mb-lg-0 mr-lg-3"><a class="resume-link" href="#"><i class="fab fa-twitter-square fa-2x mr-2" data-fa-transform="down-4"></i><span class="d-none d-lg-inline-block text-muted">@twittername</span></a></li>
+								<p></p>
+								<li class="list-inline-item mb-lg-0 mr-lg-3"><a class="resume-link" href="#"><span class="d-none d-lg-inline-block text-muted" id="counter"></span></a></li>
 							</ul>
 						</div><!--//resume-footer-->
 					</article>
@@ -283,13 +283,10 @@
 						url: url+fileName
 					})
 					console.log(response);
-					document.getElementById("counter").innerHTML = "page count="+ response.data;
+					document.getElementById("counter").innerHTML = "page count "+ response.data;
 				}
 				</script>
-			
-			<h1> CV page</h1>
-			<h2 id="counter" value="0"></h2>
-			
+						<!--<h2 id="counter" value="0"></h2>-->
 </body>
 </html> 
 

@@ -2,6 +2,11 @@
 <script>
     async function getcounter (e) {
         var fileName = location.href.split("/").slice(-1); 
+        // root domain serves index without it appearing in url
+        if (fileName==null){
+            filename="index.html";
+        }
+
         var url = "https://cvcounter.azurewebsites.net/api/counter?page=";
 
         console.log("counter url " + url+fileName);
@@ -11,7 +16,6 @@
             url: url+fileName
         })
         console.log(response);
-        //document.write(response.data);
         document.getElementById("counter").innerHTML = "page count="+ response.data;
     }
     </script>

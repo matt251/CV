@@ -4,7 +4,7 @@
         var fileName = location.href.split("/").slice(-1); 
         // root domain serves index without it appearing in url
         if (fileName==null){
-            filename="index.html";
+            fileName="index.html";
         }
 
         var url = "https://cvcounter.azurewebsites.net/api/counter?page=";

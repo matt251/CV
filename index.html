@@ -4,8 +4,8 @@
         var fileName = location.href.split("/").slice(-1); 
         var url = "https://cvcounter.azurewebsites.net/api/counter?page=";
 
-        console.log(url+fileName);
-        
+        console.log("counter url " + url+fileName);
+
         const response = await axios({
             method: 'GET',
             url: url+fileName

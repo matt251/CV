@@ -270,7 +270,7 @@
 				async function getcounter (e) {
 					var fileName = location.href.split("/").slice(-1); 
 					// root domain serves index without it appearing in url
-					if (fileName==null){
+					if (fileName==null || fileName=="#"){
 						fileName="index.html";
 					}
 			

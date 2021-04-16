@@ -265,7 +265,13 @@
 			<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 			<script>
 				async function getcounter (e) {
-					var fileName = location.href.split("/").slice(-1); 
+					//var fileName = location.href.split("/").slice(-1); 
+					fileName=window.location.pathname;
+					
+					if (fileName){
+						fileName = fileName.replaceAll("/", "-");	
+					}
+
 					// root domain serves index without it appearing in url
 					if ((fileName==null || fileName=="")|| fileName=="#"){
 						fileName="index.html";

@@ -1,0 +1,13 @@
+{
+  "cognito": {
+    "poolId": "us-east-1:d5a41358-dce6-4e76-9a68-3d8f2dd46e9b"
+  },
+  "lex": {
+    "botName": "MakeAppointment"
+  },
+  "iframe": {
+    "iframeOrigin": "http://127.0.0.1:5500",
+    "shouldLoadIframeMinimized": false,
+    "iframeSrcPath": "/parent.html#/?lexWebUiEmbed=true"
+  }
+}
